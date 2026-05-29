@@ -23,11 +23,14 @@
 
 # Tratamento de erro completo
 
-try:
-    num = int(input("Digite um numero: "))
-except ValueError:
-    print("Valor inválido")
-else:
-    print(f"Você digitou: {num}")
-finally:
-    print("Fim do bloco try/catch")
+while True:
+    try:
+        num = int(input("Digite um numero: "))
+        print(f"Você digitou: {num}")
+        break
+    except ValueError:
+        print("Valor inválido")
+    else:
+        print(f"Você digitou: {num}")
+    finally:
+        print("Fim do bloco try/catch")
