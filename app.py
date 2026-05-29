@@ -15,8 +15,19 @@
 #     print("Não é possível dividir por zero!")
 
 # erro de index
+# try:
+#     lista = [1, 2, 3]
+#     print(lista[5])
+# except IndexError:
+#     print("Índice fora do intervalo")
+
+# Tratamento de erro completo
+
 try:
-    lista = [1, 2, 3]
-    print(lista[5])
-except IndexError:
-    print("Índice fora do intervalo")
+    num = int(input("Digite um numero: "))
+except ValueError:
+    print("Valor inválido")
+else:
+    print(f"Você digitou: {num}")
+finally:
+    print("Fim do bloco try/catch")
